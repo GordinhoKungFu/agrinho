@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial, sans-serif';
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+header, footer {
+    background-color: #4CAF50; 
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #FF9800; 
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+}
+
+.container {
+    padding: 2rem;
+    margin: 1rem 0;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2em;
+    color: #00f050; 
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #555;
+    text-align: justify;
+    margin: 0 20px;
+}
+
+.home p {
+    background-color: #e3f2fd;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.sobre p {
+    background-color: #f1f8e9;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.migracao p {
+    background-color: #fff3e0;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.sustentabilidade p {
+    background-color: #e8f5e9;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.tecnologia p {
+    background-color: #ede7f6;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.contato {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contato h2 {
+    text-align: center;
+    color: #4CAF50; 
+    margin-bottom: 20px;
+}
+
+.contato form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contato label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.contato input[type="text"],
+.contato input[type="email"],
+.contato textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.contato input[type="text"]:focus,
+.contato input[type="email"]:focus,
+.contato textarea:focus {
+    border-color: #4CAF50; 
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+.contato input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contato input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.text_foot {
+    color: white;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+}
+
+#theme-toggle-button {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 7em;
+    cursor: pointer;
+}
+
+#toggle {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+#container,
+#patches,
+#stars,
+#button,
+#sun,
+#moon,
+#cloud {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.25s;
+}
+
+.dark-mode body {
+    background-color: #2b2b2b;
+    color: #e0e0e0;
+}
+
+.dark-mode header, .dark-mode footer {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+.dark-mode .container {
+    background-color: #333333;
+    color: #e0e0e0;
+}
+
+
+#toggle:checked + svg #container {
+    fill: #2b4360;
+}
+
+#toggle:checked + svg #button {
+    transform: translate(28px, 2.333px);
+}
+
+#sun {
+    opacity: 1;
+}
+
+#toggle:checked + svg #sun {
+    opacity: 0;
+}
+
+#moon {
+    opacity: 0;
+}
+
+#toggle:checked + svg #moon {
+    opacity: 1;
+}
+
+#cloud {
+    opacity: 1;
+}
+
+#toggle:checked + svg #cloud {
+    opacity: 0;
+}
+
+#stars {
+    opacity: 0;
+}
+
+#toggle:checked + svg #stars {
+    opacity: 1;
+}
+.minha_foto {
+    border-radius: 100%;
+    height: 50px;
+}
+.footerc,.minha_foto {
+    display: inline-block;
+}
+
