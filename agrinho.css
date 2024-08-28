@@ -1,3 +1,4 @@
+/* Reset global */
 * {
     margin: 0;
     padding: 0;
@@ -5,14 +6,15 @@
 }
 
 body {
-    font-family: 'Arial, sans-serif';
+    font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #ffffff; /* Cor de fundo para modo claro */
+    color: #000000; /* Cor do texto para modo claro */
 }
 
-header, footer {
-    background-color: #4CAF50; 
+header,
+footer {
+    background-color: #4CAF50; /* Cor de fundo para modo claro */
     color: white;
     text-align: center;
     padding: 1rem 0;
@@ -22,7 +24,7 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    background-color: #FF9800; 
+    background-color: #FF9800;
 }
 
 nav ul li {
@@ -39,14 +41,14 @@ nav ul li a {
 .container {
     padding: 2rem;
     margin: 1rem 0;
-    background-color: white;
+    background-color: #ffffff; /* Cor de fundo para modo claro */
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
     font-size: 2em;
-    color: #00f050; 
+    color: #00f050;
     text-align: center;
     margin-bottom: 20px;
     text-transform: uppercase;
@@ -62,36 +64,14 @@ p {
     margin: 0 20px;
 }
 
-.home p {
-    background-color: #e3f2fd;
-    padding: 15px;
-    border-radius: 8px;
-}
+/* Estilos específicos para seções */
+.home p { background-color: #e3f2fd; }
+.sobre p { background-color: #f1f8e9; }
+.migracao p { background-color: #fff3e0; }
+.sustentabilidade p { background-color: #e8f5e9; }
+.tecnologia p { background-color: #ede7f6; }
 
-.sobre p {
-    background-color: #f1f8e9;
-    padding: 15px;
-    border-radius: 8px;
-}
-
-.migracao p {
-    background-color: #fff3e0;
-    padding: 15px;
-    border-radius: 8px;
-}
-
-.sustentabilidade p {
-    background-color: #e8f5e9;
-    padding: 15px;
-    border-radius: 8px;
-}
-
-.tecnologia p {
-    background-color: #ede7f6;
-    padding: 15px;
-    border-radius: 8px;
-}
-
+/* Contato */
 .contato {
     max-width: 600px;
     margin: 0 auto;
@@ -103,7 +83,7 @@ p {
 
 .contato h2 {
     text-align: center;
-    color: #4CAF50; 
+    color: #4CAF50;
     margin-bottom: 20px;
 }
 
@@ -132,7 +112,7 @@ p {
 .contato input[type="text"]:focus,
 .contato input[type="email"]:focus,
 .contato textarea:focus {
-    border-color: #4CAF50; 
+    border-color: #4CAF50;
     outline: none;
     box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
 }
@@ -152,16 +132,68 @@ p {
     background-color: #45a049;
 }
 
-.text_foot {
+/* Rodapé */
+.footerc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #4CAF50; /* Cor de fundo para modo claro */
     color: white;
 }
 
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
+.minha_foto {
+    border-radius: 100%;
+    height: 50px;
+    margin-right: 10px;
 }
 
+.text_foot { 
+    color: white; /* Cor do texto do rodapé para modo claro */
+}
+
+/* Modo escuro */
+.dark-mode body {
+    background-color: #2b2b2b; /* Cor de fundo para modo escuro */
+    color: #e0e0e0; /* Cor do texto para modo escuro */
+}
+
+.dark-mode header,
+.dark-mode footer,
+.dark-mode .footerc {
+    background-color: #333333; /* Cor de fundo para modo escuro */
+}
+
+.dark-mode nav ul {
+    background-color: #333333; /* Cor de fundo para o menu no modo escuro */
+}
+
+.dark-mode nav ul li a {
+    color: #e0e0e0; /* Cor do texto dos links no modo escuro */
+}
+
+.dark-mode .container {
+    background-color: #333333; /* Cor de fundo para as seções no modo escuro */
+    color: #e0e0e0; /* Cor do texto para as seções no modo escuro */
+}
+
+.dark-mode .contato {
+    background-color: #444444; /* Cor de fundo para o contato no modo escuro */
+}
+
+.dark-mode .contato label,
+.dark-mode .contato input,
+.dark-mode .contato textarea {
+    border-color: #555555;
+    color: #e0e0e0;
+}
+
+.dark-mode .contato input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Estilos de transição do toggle */
 #theme-toggle-button {
     font-size: 17px;
     position: relative;
@@ -183,26 +215,8 @@ p {
 #sun,
 #moon,
 #cloud {
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 0.25s;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.dark-mode body {
-    background-color: #2b2b2b;
-    color: #e0e0e0;
-}
-
-.dark-mode header, .dark-mode footer {
-    background-color: #1a1a1a;
-    color: #e0e0e0;
-}
-
-.dark-mode .container {
-    background-color: #333333;
-    color: #e0e0e0;
-}
-
 
 #toggle:checked + svg #container {
     fill: #2b4360;
@@ -243,11 +257,3 @@ p {
 #toggle:checked + svg #stars {
     opacity: 1;
 }
-.minha_foto {
-    border-radius: 100%;
-    height: 50px;
-}
-.footerc,.minha_foto {
-    display: inline-block;
-}
-
